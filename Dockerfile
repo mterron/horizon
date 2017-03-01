@@ -1,17 +1,17 @@
 FROM alpine:3.5
 
-#ENV RETHINKDB_URI=rethinkdb://rethinkdb:28015
-
-RUN apk --no-cache upgrade &&\
+RUN	echo -e "\e[1;48;5;166mH\e[48;5;202mo\e[48;5;203mr\e[48;5;208mi\e[48;5;209mz\e[48;5;214mo\e[48;5;216mn\e[0m on \e[1;44mAlpine\e[0m linux 3.5" &&\
+	apk --no-cache upgrade &&\
+	echo "Installing Horizon dependencies" &&\
 	apk --no-cache add nodejs openssl su-exec &&\
 	echo "Installing Horizon" &&\
 	npm install -g horizon &&\
-	mkdir /horizon &&\
-	chown daemon:daemon /horizon
+	mkdir -p /usr/app &&\
+	chown daemon:daemon /usr/app
 
-VOLUME ["/horizon"]
+VOLUME ["/usr/app"]
 
-WORKDIR /horizon/app
+WORKDIR /usr/app
 
 EXPOSE 8181
 
