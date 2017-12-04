@@ -1,6 +1,6 @@
 # Alpine based Horizon Docker image
 
-![horizon](https://horizon.io/images/horizon-logo.png)
+![horizon](https://github.com/rethinkdb/horizon/blob/next/github-banner.png)
 
 ## How to use this image
 
