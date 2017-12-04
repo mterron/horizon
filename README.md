@@ -4,7 +4,7 @@
 
 ## How to use this image
 
-Same as the official one! Except it's half the size:)
+Same as the official one! Except it's only 600% smaller :)
 
 Enjoy
 
