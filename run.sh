@@ -1,5 +1,5 @@
 #!/bin/sh
-if [ ! -f /usr/app/horizon-key.pem ] && [ ${HZ_SECURE:-no} == 'yes' ]; then
+if [ ! -f /usr/app/horizon-key.pem ] && [ ${HZ_SECURE:-yes} == 'yes' ]; then
 	echo "Generating Horizon app certificate"
 	hz create-cert
 fi
