@@ -4,6 +4,7 @@ attr -s pax.flags -V em $(which node)
 
 if [ ! -f /usr/app/horizon-key.pem ] && [ ${HZ_SECURE:-yes} == 'yes' ]; then
 	echo "Generating Horizon app certificate"
+	sed -i "11icountryName_default\t\t= ${CERT_COUNTRY:-NZ}" /etc/ssl/openssl.cnf
 	hz create-cert
 fi
 
