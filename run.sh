@@ -1,6 +1,6 @@
 #!/bin/sh
 # Fix nodejs PaX extended attributes
-attr -s pax.flags -V em $(which node)
+attr -s pax.flags -V em $(which node) >/dev/null
 
 if [ ! -f /usr/app/horizon-key.pem ] && [ ${HZ_SECURE:-yes} == 'yes' ]; then
 	echo "Generating Horizon app certificate"
